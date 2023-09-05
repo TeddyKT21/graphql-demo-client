@@ -4,12 +4,22 @@ import { ProductCard } from "../components/ProductCard";
 import "../styles/pages.css";
 import { StatusDisplay } from "../components/StatusDisplay";
 import { ProductContext } from "../context/productContext";
+import { useSubscription } from "@apollo/client";
+import { PRODUCTS_SUBSCRIPTION } from "../graphqlQueries/subscriptions";
 
 export const ProductsPage = () => {
   const {products:allProducts, loading, error} = useContext(ProductContext)!;
   const [displayedProducts, setProducts] = useState(allProducts);
-
+  const {data} = useSubscription(PRODUCTS_SUBSCRIPTION);
+  
   useEffect(() => setProducts(allProducts), [allProducts]);
+  useEffect(() => setProducts((prev) => {
+    if(data) prev.push(data);
+    console.log(data);
+    return prev;
+    
+  }),[data]);
+
   return (
     <div className="productsPage page">
       <SearchBar

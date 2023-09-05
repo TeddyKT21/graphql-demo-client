@@ -8,7 +8,7 @@ export const Header = () => {
     <div id="header">
         <div className="linkGroup">
             <Link to={"/"}>Products</Link>
-            <Link to={"/addProduct"} onClick={() => setSelectedProduct(null)}>Add Product</Link>
+            <Link to={"/addProduct"}>Add Product</Link>
         </div>
       <div className="linkGroup">
         <Link to={"/signUp"}>Sign Up</Link>

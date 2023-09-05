@@ -17,7 +17,8 @@ export const Main = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/details" element={<Details product={detailsProduct}/>} />
-          <Route path="/addProduct" element={<EditProduct product={editProduct}/>} />
+          <Route path="/editProduct" element={<EditProduct product={editProduct}/>} />
+          <Route path="/addProduct" element={<EditProduct product={null}/>} />
         </Routes>
       </div>
   );

@@ -21,8 +21,8 @@ export const ProductCard = ({ product }: { product: Product }) => {
   };
 
   const editProduct = (e: React.MouseEvent) => {
+    navigate("/editProduct");
     setEditProduct(product);
-    navigate("/addProduct");
     e.stopPropagation();
   };
 

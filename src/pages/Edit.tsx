@@ -12,7 +12,7 @@ function checkValidity(product: Product) {
   return isValid;
 }
 
-export const EditProduct = ({product}:{product:Product}) => {
+export const EditProduct = ({product}:{product:Product|null}) => {
   const newProduct: Product = {
     name: "",
     description: "",

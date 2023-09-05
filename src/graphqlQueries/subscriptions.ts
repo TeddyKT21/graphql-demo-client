@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const PRODUCTS_SUBSCRIPTION = gql`
-  subscription ProductCreated() {
+  subscription ProductCreated {
     productCreated {
     name
     description

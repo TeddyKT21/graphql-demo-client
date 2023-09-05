@@ -9,7 +9,7 @@ export const Details = ({product}: {product:Product}) => {
   const navigate = useNavigate();
   const [deleteFromServer, { data, error, loading }] =
     useMutation(DELETE_PRODUCT);
-  const { setProducts, setDetailsProduct: setSelectedProduct } = useContext(ProductContext)!;
+  const { setProducts,setEditProduct } = useContext(ProductContext)!;
 
   const deleteProduct = () => {
     console.log("deleting product: ", product);
@@ -20,8 +20,8 @@ export const Details = ({product}: {product:Product}) => {
   };
 
   const editProduct = () => {
-    setSelectedProduct(product);
-    navigate("/addProduct");
+    setEditProduct(product);
+    navigate("/editProduct");
   };
 
   return (
