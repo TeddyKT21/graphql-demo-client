@@ -1,0 +1,50 @@
+.productCard{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: rgb(241, 241, 133) !important;
+    align-items: center;
+    border: solid 1px black;
+    padding: 0.5rem;
+    position: relative;
+    padding-bottom: 40px;
+}
+.productCard img{
+    max-width: 200px;
+    max-height: 200px;
+    margin: 8px;
+}
+.searchBar{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 2rem;
+    width: 100%;
+}
+.searchBar input{
+    height: 32px; 
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: none;
+    padding: 4px;
+}
+.searchBar > button{
+    background-color: #f0f0f0;
+    height: 40px !important;
+    padding: 4px;
+    height: fit-content;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-sizing:border-box;
+}
+
+.statusDisplay{
+    align-self: center;
+}
+.productActionOptions{
+    align-self: center;
+    position: absolute;
+    bottom: 8px;
+}

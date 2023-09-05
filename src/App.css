@@ -1,0 +1,87 @@
+:root {
+  --darkGrey: rgb(50, 50, 50);
+  --backGround: rgb(220, 220, 220);
+}
+
+body, html {
+  background-color: var(--backGround);
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+#header {
+  height: fit-content;
+  width: inherit;
+  padding-block: 8px;
+  background-color: var(--darkGrey);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-inline: 16px;
+  box-sizing: border-box;
+}
+.linkGroup{
+  display: flex;
+  justify-content: space-evenly;
+  gap:20px;
+}
+
+#footer {
+  height: fit-content;
+  width: inherit;
+  padding-block: 8px;
+  background-color: var(--darkGrey);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+#main {
+  padding: 8px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.contactInfo{
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  * {
+    font-size: 16px;
+  }
+}
+
+@media screen {
+  * {
+    font-size: 18px;
+  }
+}

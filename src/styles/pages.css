@@ -1,0 +1,47 @@
+.editForm{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.editInput{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.editPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productsPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.detailsPage{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+    padding-bottom: 40px;
+}
+.detailsPage img{
+    max-width: 500px;
+    max-height: 500px;
+    margin: 16px;
+}
