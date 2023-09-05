@@ -14,10 +14,14 @@ export const ProductsPage = () => {
   
   useEffect(() => setProducts(allProducts), [allProducts]);
   useEffect(() => setProducts((prev) => {
-    if(data) prev.push(data);
     console.log(data);
+  if (data) {
+    const copyPrev = [...prev];
+    copyPrev.push(data.productCreated);
+    return copyPrev;
+  } else {
     return prev;
-    
+  }
   }),[data]);
 
   return (
