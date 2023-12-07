@@ -10,9 +10,11 @@ import { PRODUCTS_SUBSCRIPTION } from "../graphqlQueries/subscriptions";
 export const ProductsPage = () => {
   const {products:allProducts, loading, error} = useContext(ProductContext)!;
   const [displayedProducts, setProducts] = useState(allProducts);
+  //שהגדרנו  subscriptionשימוש ב
   const {data} = useSubscription(PRODUCTS_SUBSCRIPTION);
   
   useEffect(() => setProducts(allProducts), [allProducts]);
+  //כאשר המידע יתעדכן, נעדכן בהתאם את דף המוצרים שלנו ונוסיף אליו את המוצר החדש
   useEffect(() => setProducts((prev) => {
     console.log(data);
   if (data) {

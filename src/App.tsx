@@ -10,15 +10,17 @@ import { createClient } from 'graphql-ws';
 import { split, HttpLink } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
 
+//websocketsוהן ב httpכדי לאפשר תקשורת הן ב
+//לצורך כך ניצור שני חיבורים - אחד לכל פרוטוקול
 const httpLink = new HttpLink({
   uri: 'http://localhost:8080/graphql'
 });
-
 
 const wsLink = new GraphQLWsLink(createClient({
   url: 'ws://localhost:8080/graphql',
 }));
 
+//ניצור חיבור כחם המאחד את שניהם
 const splitLink = split(
   ({ query }) => {
     const definition = getMainDefinition(query);
@@ -30,6 +32,8 @@ const splitLink = split(
   wsLink,
   httpLink,
 );
+
+//אותו נעביר לאובייקט הלקוח לצרוך האזנה לכל סוגי הבקשרות
 const client = new ApolloClient({
   link:splitLink,
   cache: new InMemoryCache(),
