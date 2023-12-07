@@ -20,7 +20,7 @@ const wsLink = new GraphQLWsLink(createClient({
   url: 'ws://localhost:8080/graphql',
 }));
 
-//ניצור חיבור כחם המאחד את שניהם
+//ניצור חיבור חכם המאחד את שניהם
 const splitLink = split(
   ({ query }) => {
     const definition = getMainDefinition(query);

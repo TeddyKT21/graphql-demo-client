@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 //השאילתה הזו מגדירה איזה מידע יוחזר במקרה של 
 //ProductCreated Subscription
 //בשונה מסוגי בקשות אחרות, המידע יתקבל כשהשרת
-//שזה קורה ביצירת מוצר כמו שראינו subscription- יפעיל אצלו את ה
+//ביצירת מוצר - subscription- יפעיל אצלו את ה
 export const PRODUCTS_SUBSCRIPTION = gql`
   subscription ProductCreated {
     productCreated {
